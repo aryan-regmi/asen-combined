@@ -1,18 +1,19 @@
 <script lang="ts">
-	export let name: string;
+    import Index from './Index.svelte'
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+    <Index/>
 </main>
 
 <style>
 	main {
 		text-align: center;
 		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+        max-width: 240px;
+        height: 97%;
+        margin: 0 auto;
+        background-color: #8491A3;
 	}
 
 	h1 {
