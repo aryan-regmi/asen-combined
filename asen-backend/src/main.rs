@@ -1,16 +1,11 @@
-use eyre::{Result};
-use thiserror::Error;
+use eyre::Result;
 use actix_files::Files;
+#[allow(unused_imports)]
 use actix_web::{App, HttpResponse, HttpServer, Responder, get, post, web};
 
-#[derive(Error, Debug)]
-#[from(std::io::Error)]
-pub enum MainError {
-    #[error("Invalid File Yo")]
-    InvalidFi()
-}
 
 // Simple server for static file
+#[allow(unused_must_use)]
 #[actix_web::main]
 async fn main() -> Result<()> {
     HttpServer::new(|| {
