@@ -1,4 +1,4 @@
-use eyre::Result;
+use color_eyre::eyre::Result;
 use actix_files::Files;
 #[allow(unused_imports)]
 use actix_web::{App, HttpResponse, HttpServer, Responder, get, post, web};
