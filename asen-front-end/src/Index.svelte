@@ -48,7 +48,7 @@
 <!-- TODO: Make Menu foldable  -->
 <div id="menu">
   <button id="pg" on:click={menuClickHandler}>{expand} Menu</button>
-  <button id="pg1" on:click={matrixTextHandler} style="visibility: {menuVis};">Matrix Multiplication</button>
+  <button id="pg1" on:click={matrixTextHandler} style="visibility: {matVis};">Matrix Multiplication</button>
   <button id="pg2" style="visibility: {menuVis};">Rotation Matrices</button>
   <button id="pg3" style="visibility: {menuVis};">Quaternions</button>
   <button id="pg4" style="visibility: {menuVis};">Misc</button>
