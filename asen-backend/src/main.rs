@@ -1,31 +1,20 @@
 use color_eyre::eyre::Result;
-use actix_files::Files;
-#[allow(unused_imports)]
-use actix_web::{App, HttpResponse, HttpServer, Responder, get, post, web};
+use rocket_contrib::serve::StaticFiles;
+#[macro_use]
+extern crate rocket;
 
-
-// Simple server for static file
-#[allow(unused_must_use)]
-#[actix_web::main]
+// Simple server for static file using Rocket
+// /home/aryan/Documents/Dev/Rust/asen-combined/asen-front-end/public/
+#[rocket::main]
 async fn main() -> Result<()> {
-    HttpServer::new(|| {
-        App::new()
-            .service(
-                Files::new(
-                    "/", "/home/aryan/Documents/Dev/Rust/asen-combined/asen-front-end/public/")
-                .index_file("index.html"))
-    })
-    .bind("127.0.0.1:8000")?
-    .run()
-    .await;
-    
+    rocket::ignite()
+        .mount(
+            "/",
+            StaticFiles::from(
+                "/home/aryan/Documents/Dev/Rust/asen-combined/asen-front-end/public/",
+            ),
+        )
+        .launch()
+        .await?;
     Ok(())
 }
-
-
-
-
-
-
-
-
