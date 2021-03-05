@@ -12,3 +12,5 @@ rocket_contrib = { git = "https://github.com/SergioBenitez/Rocket", branch = "ma
 serde = "1.0"
 color-eyre = "0.5.10"
 thiserror = "1.0.24"
+diesel = { version = "1.4.4", features = ["postgres"] }
+dotenv = "0.15.0"
